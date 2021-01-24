@@ -36,7 +36,7 @@ public class CarUtils {
     final CarDetails car = new CarDetails();
     updateCarData(carEntity, car);
     car.setLocation(getLocation(carEntity.getWareHouseEntity()));
-    car.setWarehouseId(carEntity.getWareHouseEntity().getWarehouseId());
+    car.setWarehouseName(carEntity.getWareHouseEntity().getName());
     car.setWarehouseId(carEntity.getWareHouseEntity().getWarehouseId());
     return car;
   }

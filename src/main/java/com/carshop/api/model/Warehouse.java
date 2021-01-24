@@ -1,5 +1,6 @@
 package com.carshop.api.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
@@ -14,6 +15,7 @@ import lombok.*;
 @Builder(access = AccessLevel.PUBLIC)
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Warehouse implements Comparable<Warehouse> {
 
   @JsonProperty("_id")

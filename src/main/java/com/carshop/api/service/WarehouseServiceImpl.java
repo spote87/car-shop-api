@@ -3,6 +3,7 @@ package com.carshop.api.service;
 import com.carshop.api.entity.WarehouseEntity;
 import com.carshop.api.model.Car;
 import com.carshop.api.model.CarData;
+import com.carshop.api.model.Location;
 import com.carshop.api.model.Warehouse;
 import com.carshop.api.repository.WarehouseRepository;
 import lombok.RequiredArgsConstructor;
@@ -33,7 +34,10 @@ public class WarehouseServiceImpl implements WarehouseService {
       final Warehouse.WarehouseBuilder warehouseBuilder = Warehouse.builder();
       warehouseBuilder.warehouseId(warehouseEntity.getWarehouseId());
       warehouseBuilder.name(warehouseEntity.getName());
-      warehouseBuilder.location(CarUtils.getLocation(warehouseEntity));
+      final Location location = CarUtils.getLocation(warehouseEntity);
+      //we do not want location name on warehouse level
+      location.setName(null);
+      warehouseBuilder.location(location);
       warehouseBuilder.carData(getCarsData(warehouseEntity));
       warehouses.add(warehouseBuilder.build());
     });
