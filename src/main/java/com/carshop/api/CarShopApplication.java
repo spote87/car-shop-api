@@ -1,22 +1,25 @@
 package com.carshop.api;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.orm.jpa.JpaTransactionManager;
 
-import javax.persistence.EntityManagerFactory;
-
+/**
+ * Car shop application class.
+ *
+ * @author Shivaji Pote
+ */
 @SpringBootApplication
+@Log4j2
 public class CarShopApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CarShopApplication.class, args);
-	}
-
-  @Bean
-  public JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
-    return new JpaTransactionManager(entityManagerFactory);
+  /**
+   * Main method which initializes the app.
+   *
+   * @param args
+   */
+  public static void main(final String[] args) {
+    SpringApplication.run(CarShopApplication.class, args);
   }
 
 }

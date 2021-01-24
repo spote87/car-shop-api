@@ -7,6 +7,8 @@ import javax.persistence.*;
 import java.util.Set;
 
 /**
+ * This is entity class for holding <em>Warehouses</em> data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

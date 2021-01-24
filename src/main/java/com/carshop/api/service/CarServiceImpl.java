@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
+ * Primary implementation of interface {@link CarService}.
+ *
  * @author Shivaji Pote
  **/
 @Service

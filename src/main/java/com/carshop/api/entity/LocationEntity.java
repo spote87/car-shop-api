@@ -6,6 +6,8 @@ import lombok.Setter;
 import javax.persistence.*;
 
 /**
+ * This is entity class for holding <em>locations</em> data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
+ * This is entity class for holding <em>Cars</em> data.
+ *
  * @author Shivaji Pote
  **/
 @Getter

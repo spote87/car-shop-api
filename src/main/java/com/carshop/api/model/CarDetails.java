@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
+ * Model class for holding Cars data in service/presentation layer. Difference between {@link Car} and this class is it
+ * * holds some additional data like <em>location</em>, <em>warehouse name</em> etc.
+ *
  * @author Shivaji Pote
  **/
 @Getter

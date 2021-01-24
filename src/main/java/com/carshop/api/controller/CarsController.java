@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * Controller class containing endpoints to handle cars data.
+ *
  * @author Shivaji Pote
  **/
 @RestController
@@ -21,9 +23,17 @@ public class CarsController {
 
   private final CarService carService;
 
-  @GetMapping(path = "/warehouse/{warehouseId}/car/{carId}",produces = MediaType.APPLICATION_JSON_VALUE)
+  /**
+   * This endpoint returns single cars data for specified warehouse id and car id.
+   *
+   * @param warehouseId warehouse id
+   * @param carId       car id
+   * @return {@link com.carshop.api.model.CarDetails} instance
+   * @throws CarNotFoundException if no car with specified details found
+   */
+  @GetMapping(path = "/warehouse/{warehouseId}/car/{carId}", produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<Car> getCarDetails(@PathVariable final Long warehouseId, @PathVariable final Long carId) throws CarNotFoundException {
-    return ResponseEntity.ok(carService.getCarDetails(carId,warehouseId));
+    return ResponseEntity.ok(carService.getCarDetails(carId, warehouseId));
   }
 
 }

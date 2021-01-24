@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
+ * Model class for holding location data in service/presentation layer.
+ *
  * @author Shivaji Pote
  **/
 @Getter
