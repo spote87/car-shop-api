@@ -1,4 +1,4 @@
-# Elo Ranking System
+# Car Shop APIs
 
 This is web application implemented using Spring Boot. This application contains backend APIs for _Frank's car shop_.
 scores.
